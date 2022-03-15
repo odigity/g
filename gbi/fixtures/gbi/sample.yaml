@@ -1,0 +1,50 @@
+- model: auth.user
+  pk: 1
+  fields:
+    password: pbkdf2_sha256$260000$WC8quwASMISaLZLy2hrpw6$3ekKarQYdz56xfKju0fp4HR3LaMn63SIZjpreTlWSWc=
+    last_login: null
+    is_superuser: true
+    username: admin
+    first_name: 'Mr.'
+    last_name: 'User'
+    email: 'admin@test.com'
+    is_staff: true
+    is_active: true
+    date_joined: 2021-10-11 14:30:52.193568+00:00
+    groups: []
+    user_permissions: []
+
+- model: gbi.advisor
+  pk: 1
+  fields:
+    user: 1
+    full_name: 'Mr. Advisor'
+    avatar: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png'
+
+- model: gbi.investor
+  pk: 1
+  fields:
+    user: 1
+    full_name: 'Mr. Investor'
+    avatar: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png'
+
+- model: gbi.plancategory
+  pk: 1
+  fields:
+    label: 'Retirement'
+    icon: 'https://www.pinclipart.com/picdir/middle/208-2087640_retirement-icon-png-clipart.png'
+
+- model: gbi.plan
+  pk: 1
+  fields:
+    name: 'My Retirement Plan'
+    category: 1
+
+- model: gbi.notification
+  pk: 1
+  fields:
+    body: 'hey you there'
+    icon1_content_type_id: 12  # advisor
+    icon1_object_id: 1
+    icon2_content_type_id: 9   # plan
+    icon2_object_id: 1
