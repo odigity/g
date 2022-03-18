@@ -45,14 +45,8 @@ class Notification(DjangoObjectType):
         model = models.Notification
         fields = ("id", "body")
 
-    icon_object_1 = IconObject()
-    icon_object_2 = IconObject()
-
-    def resolve_icon_object_1(parent, info):
-        return parent.icon1_object
-
-    def resolve_icon_object_2(parent, info):
-        return parent.icon2_object
+    icon1_object = IconObject()
+    icon2_object = IconObject()
 
 
 class Query(ObjectType):

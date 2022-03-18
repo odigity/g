@@ -16,11 +16,11 @@ http://localhost:8000/graphql/
         notifications {
             id
             body
-            iconObject1 {
+            icon1Object {
               __typename
               ...iconSource
             }
-            iconObject2 {
+            icon2Object {
               __typename
               ...iconSource
             }
