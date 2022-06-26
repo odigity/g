@@ -1,15 +1,17 @@
 from graphene import Schema, ObjectType, String
 
-import gbi.schema
-import librarius.schema
 
-
-class Query(
-    gbi.schema.Query,
-#    librarius.schema.Query,
+class Queries(
     ObjectType
 ):
     hello = String(default_value="Hi!")
 
 
-schema = Schema(query=Query)
+class Mutations(
+    ObjectType
+):
+    pass
+
+
+schema = Schema(query=Queries, mutation=Mutations)
+print(schema)

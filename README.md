@@ -1,7 +1,7 @@
 ## Notes
 
-./manage.py migrate
-./manage.py loaddata gbi/sample
+    ./manage.py migrate
+    ./manage.py loaddata gbi/sample
 
 http://localhost:8000/graphql/
 
