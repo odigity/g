@@ -14,4 +14,4 @@ class Mutations(
 
 
 schema = Schema(query=Queries, mutation=Mutations)
-print(schema)
+#print(schema)

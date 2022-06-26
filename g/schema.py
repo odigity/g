@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User as UserModel
-from graphene import Field, ObjectType, Union
+
+from graphene        import Field, ObjectType, Schema, String, Union
 from graphene_django import DjangoListField, DjangoObjectType
 
 from . import models
@@ -49,5 +50,15 @@ class Notification(DjangoObjectType):
     icon2_object = IconObject()
 
 
-class Query(ObjectType):
+class Queries(ObjectType):
+    hello         = String(default_value="Hi!")
     notifications = DjangoListField(Notification)
+
+
+class Mutations(ObjectType):
+    pass
+
+
+#schema = Schema(query=Queries, mutation=Mutations)
+schema = Schema(query=Queries)
+#print(schema)
